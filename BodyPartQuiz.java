@@ -1,4 +1,6 @@
 /*
+
+
  *    Copyright (c) The League of Amazing Programmers 2013-2017
  *    Level 1
  */
@@ -6,6 +8,7 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import javax.imageio.ImageTypeSpecifier;
 import javax.print.attribute.IntegerSyntax;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -32,24 +35,61 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-		for (int i = 1; i <= 4; i++) {
-			
-		}
+		int score = 0;
+		
 		// 2. Set the size of the window in the initializeGui() method below
-
-		for (int i = 0; i < 4; i++) {
+initializeGui();
+	
 			
 			// 4. Ask the user who this person is and store their answer
-			String guess= JOptionPane.showInputDialog("who is this?");
+String fire=JOptionPane.showInputDialog("Who is This?");
+
+
 
 			
-			if ( firstImage=="Arnold Schwarzenegger"){
-				System.out.println("You are Correct");
-			}
-			else{
-				System.out.println("You are Wrong" + "This is Arnold Schwarzenegger");
-			}
 			// 5. Check their answer. If they guessed correctly:
+	if(fire=="Arnold Schwarzenegger"){
+		JOptionPane.showMessageDialog(null, "You Are Correct");
+		score++;
+	}
+	else{
+		JOptionPane.showMessageDialog(null, "You are wrong" + " the answer is Arnold Schwarzenegger");
+		score--;
+	}
+	showNextImage();
+	String water=JOptionPane.showInputDialog("Who is This?");
+	
+	
+	if(water=="Leonardo DiCaprio"){
+		JOptionPane.showMessageDialog(null, "You Are Correct");
+		score++;
+	}
+	else{
+		JOptionPane.showMessageDialog(null, "You are wrong " + " the answer is Leonardo DiCaprio");
+		score--;
+	}
+	
+	showNextImage();
+	String earth=JOptionPane.showInputDialog("Who is This?");
+	if(earth=="Morgan Freeman"){
+		JOptionPane.showMessageDialog(null, "You Are Correct");
+		score++;
+	}
+	else{
+		JOptionPane.showMessageDialog(null, "You are wrong " + " the answer is  Morgan Freeman");
+		score--;
+		
+	}
+	showNextImage();
+	String air=JOptionPane.showInputDialog("Who is This?");
+	if(air=="Jack Stack"){
+		JOptionPane.showMessageDialog(null, "You Are Correct");
+		score++;
+	}
+	else{
+		JOptionPane.showMessageDialog(null, "You are wrong " + " the answer is  Jack Stack");
+		score--;
+	}
 			// -- Tell them they are right and increase the score by 1
 	// 6. Otherwise:
 			// -- Tell them they are wrong and who the person is
@@ -57,11 +97,11 @@ public class BodyPartQuiz {
 			// 7. Use the showNextImage() method below to get the next image
 			showNextImage();
 		    // 8. Show them their current score
-			
+			JOptionPane.showMessageDialog(null, "Your Score Is " + score);
 			// 9. .... repeat for all your images.....
 
 
-		}
+
 
 	}
 
