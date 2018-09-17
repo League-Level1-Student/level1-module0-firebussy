@@ -1,6 +1,4 @@
 /*
-
-
  *    Copyright (c) The League of Amazing Programmers 2013-2017
  *    Level 1
  */
@@ -8,8 +6,6 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import javax.imageio.ImageTypeSpecifier;
-import javax.print.attribute.IntegerSyntax;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -35,75 +31,77 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-		int score = 0;
-		
+int zoom=-100000000;
+JOptionPane.showMessageDialog(null, "I AM DAVE THE CODER, THE DRAGON KING, USER OF ULTIMTE MAGIC, POOR FARMER, MOST WANTED BY THE KING OF THE EMPIRE");
+JOptionPane.showMessageDialog(null, "I HAVE A QUEST FOR YOU");
+JOptionPane.showConfirmDialog(null, "DO YOU WANT MY POWERFUL MAGIC. ANSWER THESE THEN YOU SHALL GET IT");
+ JOptionPane.showConfirmDialog(null, "DO YOU WANT TO CONTINUE THIS IT COULD BE YOUR DOOM?? ");
+ JOptionPane.showMessageDialog(null, "YOU SHALL LOSE NO MATTER WHAT");
+ JOptionPane.showConfirmDialog(null, "CAN YOU PROVE ME WRONG??");
+JOptionPane.showMessageDialog(null, "DO NOT FORGET TO START THE NAME AND LAST NAME IN CAP LOCKS!!!");
 		// 2. Set the size of the window in the initializeGui() method below
-initializeGui();
-	
+
+		for (int i = 0; i < 4; i++) {
 			
 			// 4. Ask the user who this person is and store their answer
-String fire=JOptionPane.showInputDialog("Who is This?");
-
-
-
+			String firstImage= JOptionPane.showInputDialog("Who is this?");
 			
 			// 5. Check their answer. If they guessed correctly:
-	if(fire=="Arnold Schwarzenegger"){
-		JOptionPane.showMessageDialog(null, "You Are Correct");
-		score++;
-	}
-	else{
-		JOptionPane.showMessageDialog(null, "You are wrong" + " the answer is Arnold Schwarzenegger");
-		score--;
-	}
-	showNextImage();
-	String water=JOptionPane.showInputDialog("Who is This?");
-	
-	
-	if(water=="Leonardo DiCaprio"){
-		JOptionPane.showMessageDialog(null, "You Are Correct");
-		score++;
-	}
-	else{
-		JOptionPane.showMessageDialog(null, "You are wrong " + " the answer is Leonardo DiCaprio");
-		score--;
-	}
-	
-	showNextImage();
-	String earth=JOptionPane.showInputDialog("Who is This?");
-	if(earth=="Morgan Freeman"){
-		JOptionPane.showMessageDialog(null, "You Are Correct");
-		score++;
-	}
-	else{
-		JOptionPane.showMessageDialog(null, "You are wrong " + " the answer is  Morgan Freeman");
-		score--;
-		
-	}
-	showNextImage();
-	String air=JOptionPane.showInputDialog("Who is This?");
-	if(air=="Jack Stack"){
-		JOptionPane.showMessageDialog(null, "You Are Correct");
-		score++;
-	}
-	else{
-		JOptionPane.showMessageDialog(null, "You are wrong " + " the answer is  Jack Stack");
-		score--;
-	}
 			// -- Tell them they are right and increase the score by 1
-	// 6. Otherwise:
+if (firstImage.equals("Arnold Schwarzenegger")) {
+	JOptionPane.showMessageDialog(null, "You are Right");
+	JOptionPane.showMessageDialog(null, zoom+=1);
+} else {
+JOptionPane.showMessageDialog(null, "You are Wrong " + " This is Arnold Schwarzenegger");
+JOptionPane.showMessageDialog(null, zoom-=100000000);
+
+}
+showNextImage();
+String secondImage= JOptionPane.showInputDialog("Who is this?");
+if (secondImage.equals("Leonardo DiCaprio")) {
+JOptionPane.showMessageDialog(null, "You are Right");
+JOptionPane.showMessageDialog(null, zoom+=1);
+} else {
+JOptionPane.showMessageDialog(null, "You are Wrong " + " Leonardo DiCaprio");
+JOptionPane.showMessageDialog(null, zoom-=100000000);
+}
+showNextImage();
+String thirdImage= JOptionPane.showInputDialog("Who is this?");
+if (secondImage.equals("Morgan Freeman")) {
+JOptionPane.showMessageDialog(null, "You are Right");
+JOptionPane.showMessageDialog(null, zoom+=1);
+} else {
+JOptionPane.showMessageDialog(null, "You are Wrong " + " Morgan Freeman");
+JOptionPane.showMessageDialog(null, zoom-=100000000);
+}
+showNextImage();
+String fourthImage= JOptionPane.showInputDialog("Who is this?");
+if (secondImage.equals("Jack Stack")) {
+JOptionPane.showMessageDialog(null, "You are Right");
+JOptionPane.showMessageDialog(null, zoom+=1);
+} else {
+JOptionPane.showMessageDialog(null, "You are Wrong " + " Jack Stack");
+JOptionPane.showMessageDialog(null, zoom-=100000000);
+}
+JOptionPane.showMessageDialog(null,  "I told you");
+JOptionPane.showMessageDialog(null,  "Game Over");
+
+
+
+		// 6. Otherwise:
 			// -- Tell them they are wrong and who the person is
 
 			// 7. Use the showNextImage() method below to get the next image
-			showNextImage();
+}
+			
 		    // 8. Show them their current score
-			JOptionPane.showMessageDialog(null, "Your Score Is " + score);
+			
 			// 9. .... repeat for all your images.....
 
 
+		}
 
-
-	}
+	
 
 	public void showNextImage() {
 		panel.removeAll();
